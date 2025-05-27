@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: amazons # BigQuery dataset name
+    database: dbt-big-data # Your GCP project ID
+    schema: amazons # BigQuery dataset name (same as 'name')
+    tables:
+      - name: first-dataset # Exact table name in BigQuery
+        description: "Raw Amazon product reviews and metadata"
+        columns:
+          - name: product_id
+          - name: review_title
+          - name: review_content
+          - name: rating
+          - name: rating_count
+          - name: about_product
+          - name: user_id
+          - name: user_name
+          - name: review_id
+          - name: img_link
+          - name: product_link
